@@ -10,7 +10,7 @@ Some useful tips to help you get started:
 2. Go to Seeting -> Github Page -> Source -> Master Branch -> Save
 
 
-1. Copy the public URL gives you and try running it through PageSpeed Insights! Optional: [PageSpeed Insights.](https://developers.google.com/speed/pagespeed/insights/)
+1. Copy the public URL gives you and try running it through PageSpeed Insights! [PageSpeed Insights.](https://developers.google.com/speed/pagespeed/insights/)
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
@@ -18,7 +18,7 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 index.html achieved a PageSpeed score of at least 93 for Mobile and  95 Desktop vy fixing the some issues. 
 
-- Minifed style.css using [CSS Minifier.] https://cssminifier.com/  and Inline style.css.
+- Minifed style.css using [CSS Minifier](https://cssminifier.com/)  and Inline style.css.
 - async and media =" print" for print.css
 - move js & google font inside the body
 - async scripts
