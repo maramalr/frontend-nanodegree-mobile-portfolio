@@ -31,6 +31,13 @@ To optimize views/pizza.html, you will need to modify views/js/main.js until you
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
+- Minifed style.css using [CSS Minifier](https://cssminifier.com/)  and Inline style.css for main.html.
+- changePizzaSizes() Replaced querySelector with getElementByClassName, Delcared the variables outside the loop.
+- resizePizzas() Replaced querySelector with getElementById
+- updatePositions() Replaced querySelector with getElementsByClassName & created var Top 
+
+
+
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
