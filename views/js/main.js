@@ -530,16 +530,24 @@ function updatePositions() {
     frame++;
     window.performance.mark("mark_start_frame");
 
+    var items = document.getElementsByClassName('mover');
+
     // replaced querySelector with getElementsByClassName & created var Top 
     //var top = (document.body.scrollTop / 1250);
     var top = ((document.documentElement.scrollTop || document.body.scrollTop) / 1250);
-    var items = document.getElementsByClassName('mover');
+    //declared phase putside loop
+    var phase;
     for (var i = 0; i < items.length; i++) {
         // var phase = Math.sin(top + (i % 5));
-        var phase = Math.sin(top + (i % 5));
-        var shift = 100 * phase
+        phase = Math.sin(top + (i % 5));
         //replaced left by transfrom 
-        items[i].style.left = items[i].basicLeft + shift + 'px';
+        //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+        //var left = items[i].basicLeft + 100 * phase + 'px';
+        //items[i].style.transform = "translateX("+left+") translateZ(0)";
+        var left = Math.floor(items[i].basicLeft + 100 * phase) - 1000;
+
+        items[i].style.transform = 'translate(' + left + 'px,0)';
+
     }
 
     // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -567,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elem.style.width = "73.333px";
         elem.basicLeft = (i % cols) * s;
         elem.style.top = (Math.floor(i / cols) * s) + 'px';
-        document.querySelector("#movingPizzas1").appendChild(elem);
+        document.getElementById("movingPizzas1").appendChild(elem);
     }
     updatePositions();
 });
