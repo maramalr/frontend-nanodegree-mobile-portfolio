@@ -478,10 +478,11 @@ var resizePizzas = function(size) {
     // Iterates through pizza elements on the page and changes their widths
     //Replaced querySelector with getElementByClassName, Delcared the variables outside the loop.
     function changePizzaSizes(size) {
-        var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size);
-        var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
-        for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
-            document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
+        var callDoc = document.getElementsByClassName;
+        var dx = determineDx(callDoc("randomPizzaContainer")[0], size);
+        var newwidth = (callDoc("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
+        for (var i = 0; i < callDoc("randomPizzaContainer").length; i++) {
+            document.callDoc("randomPizzaContainer")[i].style.width = newwidth;
         }
     }
 
@@ -497,8 +498,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-    var pizzasDiv = document.getElementById("randomPizzas");
     pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -567,8 +568,12 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
     var s = 256;
-    for (var i = 0; i < 200; i++) {
-        var elem = document.createElement('img');
+    var rows = screen.height / s;
+    var pizzasNo = rows * cols;
+//declare var outside for loop
+    var elem;
+    for (var i = 0; i < pizzasNo; i++) {
+        elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
         elem.style.height = "100px";
