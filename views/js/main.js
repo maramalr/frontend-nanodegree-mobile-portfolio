@@ -539,7 +539,7 @@ function updatePositions() {
         var phase = Math.sin(top + (i % 5));
         var shift = 100 * phase
         //replaced left by transfrom 
-        items[i].style.transform = items[i].basicLeft + shift + 'px';
+        items[i].style.left = items[i].basicLeft + shift + 'px';
     }
 
     // User Timing API to the rescue again. Seriously, it's worth learning.
