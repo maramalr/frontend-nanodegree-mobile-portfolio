@@ -34,7 +34,7 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 - Minifed style.css using [CSS Minifier](https://cssminifier.com/)  and Inline style.css for main.html.
 - changePizzaSizes() Replaced querySelector with getElementByClassName, Delcared the variables outside the loop.
 - resizePizzas() Replaced querySelector with getElementById
-- updatePositions() Replaced querySelector with getElementsByClassName & created var Top 
+- updatePositions() Replaced querySelector with getElementsByClassName & created var Top, Replaced .left to transfrom
 
 
 
