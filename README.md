@@ -22,7 +22,7 @@ index.html achieved a PageSpeed score of at least 93 for Mobile and  95 Desktop 
 - async and media =" print" for print.css
 - move js & google font inside the body
 - async scripts
-- optimize images and make them local
+- optimize images and make them local "https://tinyjpg.com/"
 
 
 #### Part 2: Optimize Frames per Second in pizza.html
